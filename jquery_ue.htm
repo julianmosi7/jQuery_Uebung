@@ -1,0 +1,216 @@
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>jQuery Ü</title>
+  <link rel="stylesheet"
+        type="text/css"
+        href="jquery_ue.css" />
+  <script type="text/javascript"
+          language="JavaScript"
+          src="jquery-3.4.0/jquery.js"></script>
+  <script type="text/javascript"
+          language="JavaScript"
+          src="jquery_ue.js"></script>
+</head>
+
+<body>
+  <div id="input">
+    <table>
+      <tr>
+        <td>
+          <input type="radio"
+                 name="effect"
+                 id="slideDown"
+                 value="slideDown" />slideDown<br />
+          <input type="radio"
+                 name="effect"
+                 id="slideUp"
+                 value="slideUp" />slideUp<br />
+          <input type="radio"
+                 name="effect"
+                 id="fadeIn"
+                 value="fadeIn" />fadeIn<br />
+          <input type="radio"
+                 name="effect"
+                 id="fadeOut"
+                 value="fadeOut" />fadeOut<br />
+          <input type="radio"
+                 name="effect"
+                 id="show"
+                 value="show" />show<br />
+          <input type="radio"
+                 name="effect"
+                 id="hide"
+                 value="hide"
+                 checked="checked" />hide<br /> Speed:
+          <input type="text"
+                 id="speed"
+                 value="1000" /><br />
+          <button id="executeEffect">
+                        Execute Effect
+                    </button>
+        </td>
+        <td>
+          Property:
+          <select id="property">
+                        <option value="background-color" selected="selected">background-color</option>
+                        <option value="border-style">border-style</option>
+                        <option value="border-color">border-color</option>
+                        <option value="border-style">border-style</option>
+                        <option value="border-width">border-width</option>
+                        <option value="font-size">font-size</option>
+                        <option value="font-weight">font-weight</option>
+                        <option value="font-family">font-family</option>
+                        <option value="font-style">font-style</option>
+                        <option value="font-weight">font-weight</option>
+                        <option value="height">height</option>
+                        <option value="margin-bottom">margin-bottom</option>
+                        <option value="margin-left">margin-left</option>
+                        <option value="margin-right">margin-right</option>
+                        <option value="margin-top">margin-top</option>
+                        <option value="padding">padding</option>
+                        <option value="width">width</option>
+                    </select> Val:
+          <input type="text"
+                 id="propertyVal"
+                 value="red" /><br />
+          <input type="radio"
+                 name="method"
+                 id="css"
+                 value="css"
+                 checked="checked" />css<br />
+          <input type="radio"
+                 name="method"
+                 id="animate"
+                 value="animate" />animate<br />
+          <button id="executeProperty">
+                        Execute Property
+                    </button>
+        </td>
+      </tr>
+    </table>
+    Selector:<input type="text"
+           id="selector"
+           value=".abc"
+           size="100px" /><br /> HTML:
+    <input type="text"
+           id="html"
+           value="><div>Some dummy entry</div>"
+           size="100px" />
+    <button id="executeHTML">
+            Execute HTML
+        </button>
+    <input type="radio"
+           name="addstyle"
+           id="before"
+           value="before"
+           checked="checked" />before
+    <input type="radio"
+           name="addstyle"
+           id="after"
+           value="after" />after
+    <input type="radio"
+           name="addstyle"
+           id="prepend"
+           value="prepend" />insert
+    <input type="radio"
+           name="addstyle"
+           id="append"
+           value="append" />append<br />
+  </div>
+  <hr />
+  <div id="tags">
+    <div id="labels">
+      <span id="SpanA">SpanA</span> <span id="SpanB"
+            class="abc">SpanB</span> <span id="SpanC"
+            class="def">SpanC</span> <span id="SpanD">SpanD</span>
+      <div id="images">
+        <img src="img.gif"
+             alt="Bildchen"
+             class="abc" />
+        <img src="img.gif"
+             alt="Bildchen"
+             id="Bild2" />
+        <img src="img.gif"
+             alt="Bildchen"
+             id="Bild3"
+             class="def" />
+      </div>
+    </div>
+    <div id="lists">
+      <table>
+        <tr>
+          <td>
+            <ul id="List_A"
+                class="def">
+              <li id="List_A_1">List_A_1</li>
+              <li id="List_A_2"
+                  class="abc def">List_A_2</li>
+              <li id="List_A_3">List_A_3</li>
+              <li id="List_A_4"
+                  class="def">List_A_4</li>
+              <li id="List_A_5">List_A_5</li>
+              <li id="List_A_6">List_A_6</li>
+            </ul>
+          </td>
+          <td>
+            <ul id="List_B">
+              <li id="List_B_1">List_B_1</li>
+              <li id="List_B_2"
+                  class="def">List_B_2</li>
+              <li id="List_B_3">List_B_3</li>
+              <li id="List_B_4"
+                  class="abc">List_B_4</li>
+              <li id="List_B_5">List_B_5</li>
+              <li id="List_B_6">List_B_6</li>
+            </ul>
+          </td>
+          <td>
+            <ul id="List_C"
+                class="abc">
+              <li id="List_C_1">List_C_1</li>
+              <li id="List_C_2"
+                  class="def">List_C_2</li>
+              <li id="List_C_3">List_C_3</li>
+              <li id="List_C_4"
+                  class="def">List_C_4</li>
+              <li id="List_C_5">List_C_5</li>
+              <li id="List_C_6">List_C_6</li>
+            </ul>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div id="tableDiv">
+      <table id="table">
+        <tr id="tr_1">
+          <td id="td_A_1">td_A_1</td>
+          <td id="td_B_1">td_B_1</td>
+        </tr>
+        <tr id="tr_2"
+            class="abc">
+          <td id="td_A_2">td_A_2</td>
+          <td id="td_B_2">td_B_2</td>
+        </tr>
+        <tr id="tr_3"
+            class="def">
+          <td id="td_A_3">td_A_3</td>
+          <td id="td_B_3">td_B_3</td>
+        </tr>
+        <tr id="tr_4"
+            class="abc">
+          <td id="td_A_4"
+              class="def">td_A_4</td>
+          <td id="td_B_4">td_B_4</td>
+        </tr>
+        <tr id="tr_5">
+          <td id="td_A_5">td_A_5</td>
+          <td id="td_B_5">td_B_5</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</body>
+
+</html>
